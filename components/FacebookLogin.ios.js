@@ -50,7 +50,7 @@ export default class FacebookLogin extends Component {
                   } else {
                     AccessToken.getCurrentAccessToken().then(
                       (data) => {
-                        console.log('access token', data.accessToken.toString());
+                        console.log('access token for cilent side', data.accessToken.toString());
                       }
                     )
                   }
