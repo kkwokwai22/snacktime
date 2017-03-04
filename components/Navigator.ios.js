@@ -3,6 +3,7 @@ import { Provider } from "react-redux";
 import App from './App.ios.js';
 import camera from './Camera.ios.js';
 import BaseApp from './baseApp.ios.js';
+import UserPage from './UserPage.ios.js';
 import Welcome from './Welcome.ios.js';
 import { NavigatorIOS } from 'react-native';
 import styles from '../styles.ios.js';
@@ -11,14 +12,14 @@ export default class snacktime extends Component {
   render() {
     return (
       <NavigatorIOS
-        initialRoute={{ 
-          component: Welcome,
+        initialRoute={{
+          component: UserPage,
           title: 'Home'
            }}
         style={{flex: 1}}
         navigationBarHidden={true}
         renderScene={this.navigatorRenderScene}
-      /> 
+      />
     );
   }
 
@@ -27,7 +28,7 @@ export default class snacktime extends Component {
       case 'Home': {
         return (
           <Provider store={store}>
-            <App 
+            <App
               navigator={navigator}
             />
           </Provider>
